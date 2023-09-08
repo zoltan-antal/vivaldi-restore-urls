@@ -9,3 +9,10 @@ file_name = sys.argv[1]
 fhand = open(file_name, "r")
 contents = fhand.read()
 fhand.close()
+
+urlList = []
+
+
+fhand = open("./decoded/" + file_name + ".txt", "w")
+fhand.writelines(urlList)
+fhand.close()
