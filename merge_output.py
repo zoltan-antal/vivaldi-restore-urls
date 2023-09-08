@@ -3,7 +3,6 @@ import time
 
 file_names = sorted(os.listdir("./dist"))
 file_names = list(filter(lambda file_name: file_name.find("merged") == -1, file_names))
-print(file_names)
 
 urls = set()
 
