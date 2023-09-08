@@ -21,12 +21,9 @@ while True:
 
     contents = contents[start:]
 
-    end = contents.find("\"vivaldi_tab_muted\"")
-    if (end > 5000 or end == -1):
-        end = contents.find("\"thumbnail\"")
+    end = contents.find("\"")
     if (end > 5000 or end == -1):
         continue
-    end -= 2
 
     print(contents[:end])
 
