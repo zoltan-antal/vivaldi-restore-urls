@@ -1,4 +1,5 @@
 import sys
+import os
 
 if len(sys.argv) != 2:
     print("Invalid usage. Correct: vivaldi_restore_urls [source file path]")
@@ -31,6 +32,9 @@ while True:
     urls.add(url + "\n")
 
     contents = contents[end:]
+
+if not os.path.exists("./dist"):
+    os.makedirs("./dist")
 
 fhand = open("./dist/" + file_name + ".txt", "w")
 fhand.writelines(urls)
