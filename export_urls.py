@@ -25,7 +25,10 @@ while True:
     if (end > 5000 or end == -1):
         continue
 
-    urls.add(contents[:end] + "\n")
+    url = contents[:end]
+    print(url)
+
+    urls.add(url + "\n")
 
     contents = contents[end:]
 
