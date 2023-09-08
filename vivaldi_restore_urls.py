@@ -35,7 +35,7 @@ while True:
 
     contents = contents[end:]
 
-fhand = open("./decoded/" + file_name + ".txt", "w")
+fhand = open("./dist/" + file_name + ".txt", "w")
 fhand.writelines(urlList)
 fhand.close()
 
