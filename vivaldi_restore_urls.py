@@ -10,7 +10,7 @@ fhand = open(file_name, "r")
 contents = fhand.read()
 fhand.close()
 
-urlList = []
+urls = set()
 
 while True:
     if contents.find("urlForThumbnail") == -1:
@@ -27,13 +27,12 @@ while True:
 
     print(contents[:end])
 
-    urlList.append(contents[:end])
-    urlList.append("\n")
+    urls.add(contents[:end] + "\n")
 
     contents = contents[end:]
 
 fhand = open("./dist/" + file_name + ".txt", "w")
-fhand.writelines(urlList)
+fhand.writelines(urls)
 fhand.close()
 
 print("Succesfully executed. Find decoded files with URLs in dist folder.")
